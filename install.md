@@ -86,7 +86,7 @@ fn process_instruction(
 ### build and deploy
 ```bash
 # プログラムのビルド
-cargo build-bpf --manifest-path=Cargo.toml --bpf-out-dir=dist/program
+cargo-build-sbf --manifest-path=Cargo.toml --sbf-out-dir=dist/program
 
 # Devnetにプログラムをデプロイ
 solana program deploy dist/program/{objct_name}.so
