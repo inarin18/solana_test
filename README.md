@@ -235,7 +235,7 @@ node client.mjs
 // in node_modules/@solana-developer/helpers/dist/esm/index.js
 
 export * from './lib/keypair.js.js';
-s
+
 // 修正後
 export * from './lib/keypair.js'
 ```
