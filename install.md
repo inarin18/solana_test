@@ -10,20 +10,18 @@ export PATH="/home/ユーザー/.local/share/solana/install/active_release/bin:$
 
 # インストールが完了したか確認
 solana --version
-
 ```
 
 ## Create a Wallet
 ```bash
 # 新しいウォレットを作成
-solana-keygen new --outfile ~/my-solana-wallet.json
+solana-keygen new --outfile ~/.config/solana/id.json
 
 # デフォルトのキーペアに設定
-solana config set --keypair ~/my-solana-wallet.json
+solana config set --keypair ~/.config/solana/id.json
 
 # ウォレットアドレスを表示
 solana address
-
 ```
 
 
@@ -34,7 +32,6 @@ solana config set --url https://api.devnet.solana.com
 
 # Devnetの接続確認
 solana cluster-version
-
 ```
 
 ## Gain the SOL
@@ -42,7 +39,6 @@ solana cluster-version
 ```bash
 # Devnetでテスト用SOLを受け取る（2SOL）
 solana airdrop 2
-
 ```
 
 ## Create a Smart Contract
@@ -95,11 +91,8 @@ solana program deploy dist/program/{objct_name}.so
 
 
 #### For Help
-```bash
-# 効かなそう
-solana-install update
-```
 
+もし rustc のバージョン回りでエラーが出るのであれば solana を最新版にアップデート
 ```bash
 # From StackOverFlow
 # https://solana.stackexchange.com/questions/6875/error-package-toml-datetime-v0-6-2-cannot-be-built-because-it-requires-rustc-1
@@ -109,11 +102,12 @@ solana-install init 1.18.18
 
 ## Relate with the frontend of the Solana Program
 
+追記予定
+
 ### install
 ```bash
 # Solana Web3.jsのインストール
 npm install @solana/web3.js
-
 ```
 
 ### Send Transaction using JavaScript
